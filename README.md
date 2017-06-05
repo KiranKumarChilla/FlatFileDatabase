@@ -1,6 +1,7 @@
 # FlatFileDatabase
-Developed a file systems Database using Java which handles all the DML commands as in SQL like Create, Update, Insert and Delete
+Developed a file systems Database step by step using Java which handles all the DML commands as in SQL like Create, Update, Insert and Delete
 
+README FOR Demo.java
 1.Definition to create a Table:
 <Relation(Attribute1, Attribute2,…, Attributen)>
 <Attributei>::= <Name(Primary key):Type | Name: Type>
@@ -42,3 +43,37 @@ Read: Student_Id - S7
 Write: S10; Mohan Aziz; 15 Main St, Stillwater; 20:
 Delete: S10
 Output
+
+
+
+README FOR Demo2.java:
+This file implements  the following SQL queries on  flat-file database implemented on Demo.java.
+
+1.Read attributes from a record
+Definition to read a record
+<SFW> ::= SELECT <AttrList> FROM <Relation> WHERE <Condition>
+<AttrList> ::= <Attribute>, <AttrList> | <Attribute>
+<Condition> ::= <Attribute> = AttrVal | <Attribute> > IntVal
+For example:
+SELECT Name FROM STUDENT WHERE Number_Of_Credit_Hours_Completed = 100
+
+2.Insert or write a new record into a relation
+<Insert> ::= INSERT INTO <Relation> VALUES <AttrValList>
+<AttrValList> ::= <AttrVal> | <AttrValList>, <AttrVal>
+For example:
+INSERT INTO STUDENT VALUES 024, Jones, 1 Main St, 1/1/2009, 0
+
+3.Delete a record
+<Delete> ::= DELETE FROM <Relation> WHERE <AttrL>
+<AttrL> ::= <Attribute> = AttrVal OR <AttrL> | <Attribute> = AttrVal
+For example:
+DELETE FROM STUDENT WHERE Student_Id = 024 OR Name = Jones, Address = 1 Main St OR Date_of_First_Enrollment = 1/1/2009 OR Number_Of_Credit_Hours_Completed = 0
+
+4.Update a record
+<Update> ::= UPDATE <Relation> SET <AttrL> WHERE <Attribute> = AttrVal
+<AttrL> ::= <Attribute> = AttrVal
+For example
+UPDATE STUDENT SET Name = Tamarind WHERE Student_Id = 025
+
+
+
