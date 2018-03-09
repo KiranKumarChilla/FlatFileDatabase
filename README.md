@@ -1,4 +1,4 @@
-# FlatFileDatabase
+# NoSQL Database for a Student Information Management system
 Developed a file systems Database step by step using Java which handles all the DML commands as in SQL like Create, Update, Insert and Delete
 
 README FOR Demo.java
